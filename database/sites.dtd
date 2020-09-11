@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT researchData (fundstellen+) >
+<!ELEMENT fundstellen (id, site, longitudeUTM, latitudeUTM, elevation, gorge, siteNickname, discoverer, dateOfDiscovery, publication,
+sitePager, numberOfFigures, figureCategory, distanceNextSite, nextSite, cardinalPoints, paintingLocation, waterSight, waterAvailability,
+openFieldSight, openField, livingPlace, spatiality, visibility, context, viewFromSite, evidenceHumanOccupation, degradationPaintings, quantityArtefacts,
+lithics, pottery, ostrichEggshell, bone, charcoal, grindingImplements, stoneStructures, miscellenousArtefact, remarks, ISBN) >
+     <!ELEMENT id (#PCDATA) >
+     <!ELEMENT site (#PCDATA) >
+     <!ELEMENT longitudeUTM (#PCDATA) >
+     <!ELEMENT latitudeUTM (#PCDATA) >
+     <!ELEMENT elevation (#PCDATA) >
+     <!ELEMENT gorge (#PCDATA) >
+     <!ELEMENT siteNickname (#PCDATA) >
+     <!ELEMENT discoverer (#PCDATA) >
+     <!ELEMENT dateOfDiscovery (#PCDATA) >
+     <!ELEMENT publication (#PCDATA) >
+     <!ELEMENT sitePager (#PCDATA) >
+     <!ELEMENT numberOfFigures (#PCDATA) >
+     <!ELEMENT figureCategory (#PCDATA) >
+     <!ELEMENT distanceNextSite (#PCDATA) >
+     <!ELEMENT nextSite (#PCDATA) >
+     <!ELEMENT cardinalPoints (#PCDATA) >
+     <!ELEMENT paintingLocation (#PCDATA) >
+     <!ELEMENT waterSight (#PCDATA) >
+     <!ELEMENT waterAvailability (#PCDATA) >
+     <!ELEMENT openFieldSight (#PCDATA) >
+     <!ELEMENT openField (#PCDATA) >
+     <!ELEMENT livingPlace (#PCDATA) >
+     <!ELEMENT spatiality (#PCDATA) >
+     <!ELEMENT visibility (#PCDATA) >
+     <!ELEMENT context (#PCDATA) >
+     <!ELEMENT viewFromSite (#PCDATA) >
+     <!ELEMENT evidenceHumanOccupation (#PCDATA) >
+     <!ELEMENT degradationPaintings (#PCDATA) >
+     <!ELEMENT quantityArtefacts (#PCDATA) >
+     <!ELEMENT lithics (#PCDATA) >
+     <!ELEMENT pottery (#PCDATA) >
+     <!ELEMENT ostrichEggshell (#PCDATA) >
+     <!ELEMENT bone (#PCDATA) >
+     <!ELEMENT charcoal (#PCDATA) >
+     <!ELEMENT grindingImplements (#PCDATA) >
+     <!ELEMENT stoneStructures (#PCDATA) >
+     <!ELEMENT miscellenousArtefact (#PCDATA) >
+     <!ELEMENT remarks (#PCDATA) >
+     <!ELEMENT ISBN (#PCDATA) >

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/imagesStyle.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
+    <title>Brandbergprojekt - Bilder aus der Forschung</title>
+</head>
+<body>
+    <!--NAVIGATION-->
+    <nav>
+        <a href="intro.html">Home</a>
+        <div class="dropdown">
+        <button class="dropbtn">Forschung
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="forschung_schluchten.html">Schluchten</a>
+            <a href="forschung_fundstellen.html">Forschungsergebnisse</a>
+            <a href="forschung_bilder.html">Bilder aus der Forschung</a>
+            <a href="forschung_gisMap.html">Interaktive GIS-Karte</a>
+        </div>
+        </div> 
+        <a href="publications.html">Publikationen</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Bilder aus der Forschung</h1>
+        <p>Während der Forschung wurden ganz viele Fotos von Brandberg gesammelt. Sie werden Ihnen hier zur Verfügung gestellt, damit Sie noch mehr vom Brandbergmassiv erfahren könnten. 
+            Die Bilder können Sie einfach nach Schluchten sortieren, indem Sie die für Sie relevante Schlucht im Select-Box auswählen.
+        </p>
+        <p>Die einzelnen Fotos wurden aus der IANUS-Datenbank entnommen. Die ausführlichen Informationen über jede Schlucht können Sie unter <a href="forschung_schluchten.html">diesem Link</a> bekommen.</p>
+        
+    </header>
+
+    <!--CONTENT-->
+    <!-- The wrapper for all main elements on the page-->
+    <section class="main">
+        <div class="selectWrap">
+            <!-- User can view the photos of the sites filtered by the name of a gorge-->
+            <div id="selectGorge">
+              <label for="gorge">Aus welcher Schlucht wollen Sie sich die Bilder ansehen?</label>
+              <select id="gorge" onchange="slide(this.value)">
+                  <option value="" selected>Wählen Sie eine Schlucht aus</option>
+                  <option value="Amis">Amis</option>
+                  <option value="Circus">Circus</option>
+                  <option value="Dom">Dom</option>
+                  <option value="Eros">Eros</option>
+                  <option value="Gaaseb">Gaaseb</option>
+                  <option value="Hungorob">Hungorob</option>
+                  <option value="Karoab">Karoab</option>
+                  <option value="Naib">Naib</option>
+                  <option value="Orabes">Orabes</option>
+                  <option value="Raiders">Raiders</option>
+                  <option value="Tsisab">Tsisab</option>
+                  <option value="Umuab">Umuab</option>
+              </select>
+            </div>
+   </div>          
+    
+        <div id="imgDiv"></div>
+
+    </section>
+    
+    <!-- SCRIPTS -->
+    <script src="js/images.js"></script>
+</body>
+</html>

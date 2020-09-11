@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/introStyle.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+     crossorigin=""></script>
+<title>Brandberg Projekt - Home</title>
+</head>
+
+<body>
+  <!--NAVIGATION-->
+  <nav>
+    <a class ="active" href="intro.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Forschung
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="forschung_schluchten.html">Schluchten</a>
+        <a href="forschung_fundstellen.html">Forschungsergebnisse</a>
+        <a href="forschung_bilder.html">Bilder aus der Forschung</a>
+        <a href="forschung_gisMap.html">Interaktive GIS-Karte</a>
+      </div>
+    </div> 
+    <a href="publications.html">Publikationen</a>
+  </nav>
+
+  
+  <div class="container">
+    <div class="parallax" data-parallax="scroll" data-z-index="0" data-image-src="fotos/intro/i1.jpg">
+      <p class="borderText">Brandberg-Projekt</p>
+    </div>
+    <div class="para">
+      <p>Dieses Webportal ist dafür gedacht, dass alle Menschen, die sich für das Thema Brandberg interessieren, unsere Forschungsergebnisse einsehen könnten. <a href="forschung_schluchten.html">Hier</a> können Sie beispielsweise die Daten über die geforschten Schluchten finden. Wenn Sie die nach bestimmten Schluchten oder Artefakten sortierten Informalionen lesen wollten, besuchen Sie <a href="forschung_fundstellen.html">diese Seite</a>. </p>
+      <div class="wrap">
+        <a href="forschung_fundstellen.html#Forschungsergebnisse"><button class="btn" type="button">Entdecken!</button></a>
+      </div>
+
+    </div>
+   
+    <div class="parallax" data-parallax="scroll" data-z-index="0" data-image-src="fotos/intro/i2.jpg">
+    </div>
+    <div class="para">
+      <h2>Beschreibung des Projekts</h2>
+      <p>
+      Der 1985 verstorbene Harald Pager erstellte in den Jahren zwischen 1977 bis 1985 die Dokumentation von mehr als 38.000 
+      einzelnen Felsbildmotiven aus 671 Fundstellen im Brandberg/Daureb, Namibia. Diese weltweit an Vollständigkeit und Exaktheit
+       einzigartige Quelle wurde zwischen 1989 und 2006 vom Heinrich-Barth-Institut in sechs wissenschaftlichen Katalogen 
+       publiziert. Zusätzlich wurden alle Bilder sowie ca. 4.700 Szenen anhand eines neuartigen sprachwissenschaftlichen 
+       Aufnahmeverfahrens erfasst und als Katalog offen zugänglich gemacht. Darüber hinaus hat es sich das Projekt zur 
+       Aufgabe gemacht, mit den lokalen Bergführern zu kooperieren und bietet z.B. seit Jahren Ausbildungsprogramme an. 
+       (Tilman Lenssen-Erz)
+      </p>
+      <div class="wrap">
+        <a href="forschung_fundstellen.html"><button class="btn" type="button">Über Daten erfahren</button></a>
+      </div>
+    </div>
+    <div class="parallax" data-parallax="scroll" data-z-index="0" data-image-src="fotos/intro/i3.jpg">
+    </div>
+    <div class="para">
+      <h2>Lokalisierung</h2>
+          <div class="location">
+            <!--container for the map-->
+            <div id="map"></div>
+            <div id="loc">
+            <p>Afrika; Namibien; Brandberg</p>
+            </div>
+        </div>
+        <!-- Map script -->
+        <script>
+      
+          var mymap = L.map('map').setView([-21.133309, 14.583340], 10);
+          var marker = L.marker([-21.133309, 14.583340]).addTo(mymap);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+          maxZoom: 18,
+          attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          id: 'mapbox/streets-v11',
+          tileSize: 512,
+          zoomOffset: -1
+        }).addTo(mymap);
+
+        // Sources: 
+        // - Insert a map from Leaflet: https://leafletjs.com/examples/quick-start/
+        // - Map over Navbar: https://stackoverflow.com/questions/43053921/map-over-navbar
+        </script>
+            <div class="wrap">
+              <a href="forschung_gisMap.html"><button class="btn" type="button">Interaktive Karte anschauen</button></a>
+            </div>  
+    </div>
+    <div class="parallax" data-parallax="scroll" data-z-index="0" data-image-src="fotos/intro/i4.jpg">
+    </div>
+    <div class="para">
+      <h2>Zeitstellung</h2>
+              <p> <span class ="name">Projektdauer: </span> 1977 - 2017</p>
+              <p><span class ="name">Datenerzeugung: </span></p>
+                    <ol>
+                      <li>1977 - 1985: Arbeiten (Anfertigung von Fotographien und Zeichnungen) vor Ort am Brandberg 
+                        durch Harald Pager</li>
+                      <li>1989 - 2006: Auswertung und Publikation der Arbeiten von Harald Pager durch das Heinrich-Barth-Institut 
+                        an der Universität Köln</li>
+                      <li>2012 - 2014: Digitalisierung der analogen Datenbestände von Harald Pager durch das AAArC - 
+                        Forschungsstelle Afrika an der Universität zu Köln </li>  
+                    </ol>        
+    </div>
+    <div class="parallax" data-parallax="scroll" data-z-index="0" data-image-src="fotos/intro/i5.jpg">
+    </div>
+    <div class="para" id="contact">
+        <h2>Kontakt</h2>
+      <p>  
+        <a target="_blank" href="https://portal.dnb.de/opac.htm?method=simpleSearch&cqlMode=true&query=nid%3D121857379">Dr. Tilman Lenssen-Erz</a><br>
+         
+            Universität Köln <br>
+            Institut für Ur- und Frühgeschichte <br>
+            Forschungsstelle Afrika <br>
+            Jennerstraße 8<br>
+            50823 Köln 
+          <span>E-Mail: </span><br> lenssen.erz@uni-koeln.de
+      </p>
+    </div>
+  </div>
+
+
+  
+</body>
+</html>

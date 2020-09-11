@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/map.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
+    <title>Brandbergprojekt - GIS-Karte</title>
+</head>
+<body>
+        <!--NAVIGATION-->
+    <nav>
+        <a href="intro.html">Home</a>
+        <div class="dropdown">
+        <button class="dropbtn">Forschung
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="forschung_schluchten.html">Schluchten</a>
+            <a href="forschung_fundstellen.html">Forschungsergebnisse</a>
+            <a href="forschung_bilder.html">Bilder aus der Forschung</a>
+            <a href="forschung_gisMap.html">Interaktive GIS-Karte</a>
+        </div>
+        </div> 
+        <a href="publications.html">Publikationen</a>
+    </nav>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Interaktive Karte von Brandberg</h1>
+        <p>Die grafische Darstellung von Geodaten ermöglicht es, die Zusammenhänge zwischen verschiedenen Sachverhalten zu verstehen und daraus bestimmte Schlüsse zu ziehen. Durch Visualisierungen können sogar die Objekte dargestellt, manipuliert und analysiert werden, die in der realen Welt schwer erreichbar sind. Daher sind auf dieser Seite sowohl das zwei- als auch dreidimensionale Modell des Brandberg-Projekts abgebildet. Hier können Sie verschiedene Layer ein- und ausblenden, um ein detailliertes Verständnis des Gebiets zu bekommen. Das 3D-Modell stellt die Höhenstruktur des Brandbergmassivs dar.</p>
+        
+    </header>
+
+    <!--CONTENT-->
+    <!-- The wrapper for all main elements on the page-->
+    <section class="main">
+        <h2>Qgis2Web</h2>
+        <div class="map">
+            
+            <iframe src="GIS/2d/index.html" frameborder="0" title="2d"></iframe>
+        </div>
+
+        <h2>3D-Modell</h2>
+        <div class="map">
+            
+            <iframe src="GIS/3d/3d_map.html" frameborder="0" title="3d"></iframe>
+        </div>
+        <h2>Forschungsablauf - Eine Timelapse</h2>
+        <div class="map">
+            
+            <img src="GIS/TimeLapseYears.gif" frameborder="0" title="timelapse">
+        </div>
+        
+        <br><br><br>
+
+
+
+    </section>
+    
+</body>
+</html>

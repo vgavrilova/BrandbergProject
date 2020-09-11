@@ -1,0 +1,214 @@
+ body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Merriweather', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+} 
+
+/*NAVIGATION OF THE PAGE*/
+nav {
+    background-color: #333;
+    position: fixed; /* sticky navigation */
+    top: 0; 
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; /* the position above other elements */
+  
+  }
+  
+  nav a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+  }
+   /* The drop-down in the menu */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit; /* The value of the color from a parent-element will be used */
+    margin: 0;
+    text-transform: uppercase;
+   
+  }
+  
+  nav a:hover, .dropdown:hover .dropbtn, .active {
+    background-color: #555454;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; /* The same index */
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #cdcbcb;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+/* CONTENT OF THE PAGE */
+.container {
+  max-width: 100%;
+  margin: 40px auto;
+}
+.para {
+  max-width: 80%;
+  margin: 0 auto;
+  background: white;
+  font-size: 18px;
+  padding: 25px;
+  z-index: 1;
+}
+/* .parallax {
+  background: url('../fotos//intro/i1.jpg') no-repeat center;
+  background-size: contain;
+  background-attachment: fixed; 
+  height: 400px;
+} */
+.parallax {
+  min-height: 350px;
+  background: transparent;
+  padding: 130px 35px;
+}
+
+/* BRANDBERG-text */
+.borderText {
+  /*background-color: rgb(0,0,0); */
+  background-color: rgba(0, 0, 0, 0.486);
+  border: 10px solid #afafaf;
+  width: 500px;
+  color: rgb(255, 249, 249); /* transparancy */
+  font-weight: bold;
+  font-size: 40px;
+  position: relative; 
+  z-index: 1; /* the position in relation to other objects -> above others */
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 22px;
+  color: #4e4e4e;
+}
+
+/* section with a map */
+.location {
+  display: flex;
+  flex-direction: column;
+}
+
+/* map */
+#map {
+
+height: 250px;
+margin: 10px;
+border: 2px solid #505050;
+/* Make a map with the lower z-index, so that it won't overlap the navbar */
+z-index: 0;
+}
+#loc {
+margin-left: 20px;
+
+}
+
+/* Zeitstellung */
+
+.name {
+  font-weight: 600;
+}
+
+
+ol li {
+  margin-bottom: 10px;
+}
+/* unvisited link */
+p a:link {
+  color: black;
+}
+
+/* visited link */
+p a:visited {
+  color: #555454;
+}
+
+/* mouse over link */
+p a:hover {
+  color: #555454;
+}
+
+/* Button 'Entdecken!' */
+.wrap{
+  text-align: center;
+
+}
+.btn {
+  background-color: rgba(41, 40, 40, 0.849);
+  color: #FFF;
+  border: none;
+  padding: 10px 15px;
+  margin: 20px;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
+  position: relative;
+  top: -10px;
+
+}
+
+.btn:hover {
+  background-color: #636161;
+}
+
+.btn:active {
+  background-color: #525050;
+  box-shadow: none;
+  position: relative;
+  top: -8px;
+  left: 2px;
+}
+
+#contact {
+  text-align: center;
+}
+
+/* Sources: 
+    - http://pixelcog.github.io/parallax.js/ 
+    */

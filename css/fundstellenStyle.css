@@ -1,0 +1,285 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Merriweather', serif; /* The font from google fonts*/
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+} 
+
+/*NAVIGATION OF THE PAGE*/
+nav {
+    background-color: #333;
+    position: fixed; /* sticky navigation */
+    top: 0; 
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; /* the position above other elements */
+  
+  }
+  
+  nav a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+  }
+  /* The drop-down content in the menu */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit; /* The value of the color will be inherited from a parent-element  */
+    margin: 0;
+    text-transform: uppercase;
+   
+  }
+  
+  nav a:hover, .dropdown:hover .dropbtn, .active{
+    background-color: #555454;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2; 
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #cdcbcb;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+ /* HEADER */
+header {
+  padding-top: 60px ;
+  padding-bottom: 0;
+  text-align: center;
+  margin-bottom: 20px;
+ 
+}
+ h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #4e4e4e;
+ }
+header p {
+  margin: 0 15% 0 15%;
+  font-size: 18px;
+}
+
+
+
+ /* CONTENT */
+  
+  /* Main content */
+  .main {    
+    flex: 60%;
+    background-color: white;
+    padding: 0 20px 10px 20px;
+    margin: 0 40px 20px 40px;
+
+  }
+
+  /* Images used */
+  .img-box {
+    width: 100%;
+    padding: 0;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+  .item {
+    margin: 5px;
+    border: 2px solid #505050;
+    width: 200px;
+  }
+  
+  .item:hover {
+    border: 2px solid #a09f9f;
+  }
+  
+  .item img {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+  }
+  
+  .note {
+    padding-top: 10px;
+    text-align: center;
+    font-size: smaller;
+  }
+
+
+
+  /* The style of the wrapping for select-boxes */
+  .selectWrap {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid rgba(87, 84, 84, 0.514);
+    background-color: white;
+    padding: 25px;
+    margin: 20px 70px;
+  }
+   /* The style of a select-box (getting rid of the default-arrow) */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(129, 129, 129);
+    background-color: rgba(223, 220, 217, 0.562);
+    border-radius: 4px;
+    font-size: 18px;
+  }
+  select:hover {
+    background-color: rgba(223, 220, 217, 0.37);
+  }
+
+  label {
+    font-weight: bold;
+    color: #525050;
+  }
+
+
+
+  /* My new articles created using Filter-function in JS */
+  article {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #DDD;
+
+  }
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #4e4e4e;
+  }
+  h3 {
+    font-size: 20px;
+    color: #4e4e4e;
+  }
+  article p {
+    padding: 5px 10px;
+  }
+  .changeP {
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* Button 'show more/less' */
+  .moreBtn {
+    background-color: rgba(41, 40, 40, 0.849);
+    color: #FFF;
+    border: none;
+    padding: 10px 15px;
+    font-size: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    margin-left: 18px;
+    transition: opacity .4s ease-out, transform .4s ease-out, visibility .4s ease-out;
+    position: relative;
+    top: -10px;
+
+  }
+  
+  .moreBtn:hover {
+    background-color: #636161;
+  }
+  
+  .moreBtn:active {
+    background-color: #525050;
+    box-shadow: none;
+    position: relative;
+    top: -8px;
+    left: 2px;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 40px auto;
+  }
+  .para {
+    max-width: 80%;
+    margin: 0 auto;
+    background: white;
+    font-size: 18px;
+    padding: 25px;
+    z-index: 1;
+  }
+  /* .parallax {
+    background: url('../fotos//intro/i1.jpg') no-repeat center;
+    background-size: contain;
+    background-attachment: fixed; 
+    height: 400px;
+  } */
+  .parallax {
+    min-height: 350px;
+    background: transparent;
+    padding: 130px 35px;
+  }
+  
+  /* text */
+  .borderText {
+    /*background-color: rgb(0,0,0); */
+    background-color: rgba(0, 0, 0, 0.486);
+    border: 10px solid #afafaf;
+    width: 500px;
+    color: rgb(255, 249, 249); /* transparancy */
+    font-weight: bold;
+    font-size: 40px;
+    position: relative; 
+    z-index: 1; /* the position in relation to other objects -> above others */
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    color: #4e4e4e;
+  }
