@@ -5,11 +5,11 @@ Hello everyone!
 
 It's time to present my one of the big js-based projects - the website describing a research of Brandberg (a mountain in Namibia). I started working on this project at my university, where we got all the necessary information about the research results and some pictures of the mountain and its gorges. The research data was given in csv format and was converted later into JSON, so that it could be used in my code.
 
-This project is supported by [GitHub Pages](http://datenportal.ianus-fdz.de/pages/collectionView.jsp?dipId=1672239). 
+This project is supported by [IANUS](http://datenportal.ianus-fdz.de/pages/collectionView.jsp?dipId=1672239). 
 
 
 ## Description
-This website presents a full spectrum of information about Brandberg. Here I am going to describe every page.
+This website presents a full spectrum of information about Brandberg. Here I am going to describe every page.  
 
 The site is fully responsive and was made using JS, CSS, HTML and JSON. The main CSS feature I used here was a modern parallax effect.
 **IMPORTANT:** Open it only on a local server. Otherwise some features won't be working.
