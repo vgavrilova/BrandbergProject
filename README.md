@@ -5,7 +5,7 @@ Hello everyone!
 
 It's time to present my one of the big js-based projects - the website describing a research of Brandberg (a mountain in Namibia). I started working on this project at my university, where we got all the necessary information about the research results and some pictures of the mountain and its gorges. The research data was given in csv format and was converted later into JSON, so that it could be used in my code.
 
-This project is supported by [IANUS](http://datenportal.ianus-fdz.de/pages/collectionView.jsp?dipId=1672239). 
+This project is supported by [Heinrich-Barth-Institut e.V.](http://datenportal.ianus-fdz.de/pages/collectionView.jsp?dipId=1672239). 
 
 
 ## Description
